@@ -159,7 +159,12 @@ class CartScreen extends StatelessWidget {
                         return Center(
                           child: Text(
                             'Pesan Sekarang',
-                            style: TextStyle(color: Colors.white),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
                           ),
                         );
                       }
@@ -172,21 +177,33 @@ class CartScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '${state.cartSumamry.totalItem} Item |  Rp ${Global().numFormat(state.cartSumamry.totalPrice)}',
-                                style: TextStyle(color: Colors.white),
-                              ),
+                                  '${state.cartSumamry.totalItem} Item |  Rp ${Global().numFormat(state.cartSumamry.totalPrice)}',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .caption!
+                                      .copyWith(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
                               Text(
                                 'Termasuk ongkos kirim',
-                                style: TextStyle(color: Colors.white),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .caption!
+                                    .copyWith(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
                               )
                             ],
                           ),
                           Row(
                             children: [
-                              Text(
-                                'CHECKOUT',
-                                style: TextStyle(color: Colors.white),
-                              ),
+                              Text('CHECKOUT',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .copyWith(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
                               SizedBox(
                                 width: 4,
                               ),

@@ -81,7 +81,12 @@ class _ItemCartProductState extends State<ItemCartProduct> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Flexible(child: Text(product.name)),
+                      Flexible(
+                          child: Text(
+                        product.name,
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                            fontWeight: FontWeight.bold, color: Colors.black),
+                      )),
                       SizedBox(width: 8),
                       GestureDetector(
                         child: Icon(Icons.delete),
@@ -96,6 +101,8 @@ class _ItemCartProductState extends State<ItemCartProduct> {
                   ),
                   Text(
                     product.brandName,
+                    style: Theme.of(context).textTheme.caption!.copyWith(
+                        fontWeight: FontWeight.bold, color: Colors.grey),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -106,7 +113,10 @@ class _ItemCartProductState extends State<ItemCartProduct> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                          'Rp. ${Global().numFormat(product.price * widget.cart.orderCount)}'),
+                        'Rp. ${Global().numFormat(product.price * widget.cart.orderCount)}',
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                            fontWeight: FontWeight.bold, color: Colors.black),
+                      ),
                       Container(
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.black),
