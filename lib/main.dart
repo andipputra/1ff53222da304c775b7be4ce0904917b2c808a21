@@ -1,5 +1,5 @@
-import 'package:a7c702b6ff83b7e07dfdd2f058f00da3d1f54092/app_module.dart';
-import 'package:a7c702b6ff83b7e07dfdd2f058f00da3d1f54092/presenter/product_screen/product_screen.dart';
+import 'package:kulina_1ff53222da304c775b7be4ce0904917b2c808a21/app_module.dart';
+import 'package:kulina_1ff53222da304c775b7be4ce0904917b2c808a21/presenter/product_screen/product_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';

@@ -1,4 +1,4 @@
-import 'package:a7c702b6ff83b7e07dfdd2f058f00da3d1f54092/data/models/product.dart';
+import 'package:kulina_1ff53222da304c775b7be4ce0904917b2c808a21/data/models/product.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

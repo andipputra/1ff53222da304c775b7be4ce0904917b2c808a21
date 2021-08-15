@@ -1,5 +1,5 @@
-import 'package:a7c702b6ff83b7e07dfdd2f058f00da3d1f54092/data/models/response.dart';
-import 'package:a7c702b6ff83b7e07dfdd2f058f00da3d1f54092/data/services/product_services.dart';
+import 'package:kulina_1ff53222da304c775b7be4ce0904917b2c808a21/data/models/response.dart';
+import 'package:kulina_1ff53222da304c775b7be4ce0904917b2c808a21/data/services/product_services.dart';
 import 'package:dio/dio.dart';
 
 class ProductRepository {
@@ -10,7 +10,8 @@ class ProductRepository {
   Future<ResponseModel> getProducts(
       {required int page, required int limit}) async {
     try {
-      final productList = await productServices.getProduct(page: page, limit: limit);
+      final productList =
+          await productServices.getProduct(page: page, limit: limit);
 
       return ResponseModel(success: true, response: productList);
     } on DioError catch (e) {

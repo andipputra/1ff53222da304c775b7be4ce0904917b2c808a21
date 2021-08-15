@@ -1,4 +1,4 @@
-import 'package:a7c702b6ff83b7e07dfdd2f058f00da3d1f54092/data/models/cart.dart';
+import 'package:kulina_1ff53222da304c775b7be4ce0904917b2c808a21/data/models/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:intl/intl.dart';
@@ -41,8 +41,6 @@ class CartServices {
 
   Future<Cart?> getCartByProdIdandDate(int prodId, DateTime dateTime) async {
     final box = await cartBox();
-
-
 
     var carts2 = box.values
         .where((element) =>
@@ -124,6 +122,7 @@ class CartServices {
 
     return await box.putAt(index, data);
   }
+
   // update data
   Future<void> updateCartDecrement(Cart cart) async {
     final box = await cartBox();
@@ -134,7 +133,7 @@ class CartServices {
 
     var newCount = cart.orderCount - 1;
 
-    if(newCount != 0){
+    if (newCount != 0) {
       var data = Cart(
           orderDate: cart.orderDate,
           orderCount: newCount,
